@@ -1,0 +1,54 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Retro Signed";
+  src:
+    local("Retro Signed"),
+    url("/RetroSigned-DYYY0.ttf"); 
+
+}
+body {
+  margin: 0;
+}
+
+#container {
+  display: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 800px;
+}
+
+#container img {
+  position: absolute;
+  height: 800px;
+}
+.fancy-title {
+  text-align: center;
+  animation: .5s linear 1s infinite alternate slidein;
+  font-family: "Retro Signed";
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+@keyframes slidein {
+  from {
+    transform: scale(70%);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
