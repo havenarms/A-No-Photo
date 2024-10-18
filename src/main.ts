@@ -1,7 +1,5 @@
 import './style.css'
 
-// const container = document.querySelector('#container')
-
 const [arm1, arm2, head, torso, legs] = [
   'arm-1', 'arm-2', 'head', 'torso', 'legs'
 ].map((part) => document.querySelector<HTMLImageElement>(`#${part}`))
@@ -66,27 +64,12 @@ function spinPartImage(part: keyof typeof parts, speed: number) {
   }, 150 + 200 / speed)
 }
 
-function loadPartsSet(poseNumber: number) {
-  if (poseNumber === 0) {
-    // reset pose to some random one
-    const poseNumber = Math.floor(Math.random() * 10) + 1
-    partNames.forEach((part) => {
-      setPartImage(part, poseNumber)
-    })
-    return
-  }
-
-  partNames.forEach((part) => {
-    setPartImage(part, poseNumber)
-  })
-
-  setTimeout(() => {
-    loadPartsSet(poseNumber - 1)
-  }, 10)
-}
-
 function main() {
-  loadPartsSet(10)
+   // reset pose to some random one
+   const poseNumber = Math.floor(Math.random() * 10) + 1
+   partNames.forEach((part) => {
+     setPartImage(part, poseNumber)
+   })
 
   document.addEventListener('click', () => {
     partNames.forEach((part) => {

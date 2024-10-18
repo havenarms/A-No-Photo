@@ -21,6 +21,8 @@
 }
 body {
   margin: 0;
+  user-select: none;
+  cursor: pointer;
 }
 
 #container {
